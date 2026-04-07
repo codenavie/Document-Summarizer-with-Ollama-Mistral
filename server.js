@@ -10,10 +10,12 @@ const { extractTextFromPdf } = require('./src/services/pdfService');
 const { summarizeTextWithChunking } = require('./src/services/summarizerService');
 
 const app = express();
+const publicDir = path.join(__dirname, 'public');
 
 ensureDirectories(UPLOAD_DIR, SUMMARY_DIR);
+app.use(express.static(publicDir));
 
-app.get('/', (_req, res) => {
+app.get('/api/health', (_req, res) => {
   res.json({
     message: 'Document Summarizer API is running. Use POST /summarize with form-data key "file" (PDF only).',
   });

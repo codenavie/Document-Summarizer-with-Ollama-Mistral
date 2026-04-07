@@ -4,6 +4,7 @@ Local API that accepts a PDF upload, extracts text, summarizes it with Ollama (`
 
 ## Features
 
+- Optional Vue UI (light/dark mode) for browser-based upload and results
 - Upload PDF via API (`POST /summarize`)
 - Extract text from PDF using `pdf-parse`
 - Summarize with local Ollama API (`http://localhost:11434`)
@@ -26,6 +27,8 @@ Local API that accepts a PDF upload, extracts text, summarizes it with Ollama (`
 ```text
 Document Summarizer/
   server.js
+  public/
+  src/
   package.json
   uploads/
   summaries/
@@ -65,12 +68,20 @@ Server runs at:
 http://localhost:3000
 ```
 
+## Optional UI
+
+The project includes an optional Vue frontend served by Express.
+
+- Open `http://localhost:3000` to use the UI.
+- Use `http://localhost:3000/api/health` for API health check.
+- The API endpoint remains `POST /summarize`.
+
 ## API Usage
 
 ### Health Check
 
 ```http
-GET /
+GET /api/health
 ```
 
 ### Summarize PDF
