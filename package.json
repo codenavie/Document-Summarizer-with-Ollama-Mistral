@@ -1,0 +1,18 @@
+{
+  "name": "document-summarizer",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000D\u0000o\u0000c\u0000u\u0000m\u0000e\u0000n\u0000t\u0000-\u0000S\u0000u\u0000m\u0000m\u0000a\u0000r\u0000i\u0000z\u0000e\u0000r\u0000-\u0000w\u0000i\u0000t\u0000h\u0000-\u0000O\u0000l\u0000l\u0000a\u0000m\u0000a\u0000-\u0000M\u0000i\u0000s\u0000t\u0000r\u0000a\u0000l\u0000\r\u0000 \u0000",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1",
+    "multer": "^2.1.1",
+    "pdf-parse": "^2.4.5"
+  }
+}
